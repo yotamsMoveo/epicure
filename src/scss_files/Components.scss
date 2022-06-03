@@ -1,0 +1,47 @@
+.navbar{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #FFFFFF;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 36px 126px;
+    gap: 18px;
+
+    position: absolute;
+    width: 335px;
+    height: 200px;
+    left: 20px;
+    top: 111px;
+
+    background: rgba(255, 255, 255, 0.88);
+}
+
+.icon{
+    position: absolute;
+    left: 5.33%;
+    right: 88.27%;
+    top: 23.91%;
+    bottom: 23.91%;
+}
+
+.mainlogo{
+    // position: absolute;
+    // left: 45.6%;
+    // right: 45.62%;
+    // top: 15.22%;
+    // bottom: 15.22%;
+    height: 32px;
+    width: 32.933685302734375px;
+    left: 171px;
+    top: 7px;
+    border-radius: 0px;
+}

@@ -1,0 +1,25 @@
+.header{
+    width: 315px;
+    height: 64px;
+
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 32px;
+    /* or 133% */
+
+    letter-spacing: 1.97px;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+

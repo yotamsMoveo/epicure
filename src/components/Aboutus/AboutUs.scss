@@ -1,12 +1,10 @@
-.about_us {
+.AboutUsComp_about_us {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 39px 476px;
   gap: 32px;
-
-  position: absolute;
   width: 378px;
   height: 867px;
   left: -1px;
@@ -14,8 +12,7 @@
 
   background: #fafafa;
 }
-.aboutLogo {
-  position: absolute;
+.AboutUsComp_aboutLogo {
   width: 102px;
   height: 95px;
   left: 19px;

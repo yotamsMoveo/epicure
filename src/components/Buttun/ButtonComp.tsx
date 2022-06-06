@@ -1,5 +1,5 @@
 import Button from '@mui/material/Button';
-import Restaurant from '../pages/restaurant';
+import Restaurant from '../../pages/restaurant';
 
 function ButtonComp(props){
     function DoSomething(){

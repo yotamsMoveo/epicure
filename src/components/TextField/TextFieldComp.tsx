@@ -1,6 +1,7 @@
 import * as React from "react";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
+import searchLogo from '../../assets/search.png';
 
 function TextFieldComp(props) {
   return (
@@ -14,8 +15,19 @@ function TextFieldComp(props) {
     // >
     //   <TextField focused defaultValue={props.text}></TextField>
     // </Box>
-      <TextField focused defaultValue={props.text}></TextField>
-   
+    // <TextField focused >
+    //   <img className='TextFieldComp_searchLogo' src={searchLogo}/>
+    // </TextField>
+
+    <form>
+      <label>
+        <input type="text" name="name" >
+          {/* <div>
+            <img className='TextFieldComp_searchLogo' src={searchLogo}/>
+          </div> */}
+        </input>
+      </label>
+    </form>
   );
 }
 export default TextFieldComp;

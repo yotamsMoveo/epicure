@@ -1,14 +1,25 @@
 import "../../components/IconDish/IconDish.scss";
-import SpicyLogo from '../../assets/spicyLogo.png';
+import SpicyLogo from "../../assets/spicyLogo.png";
 
-function IconDishComp(props){
-    const iconImg=props.imgUrl;
-    const icondescription=props.description;
-    return(
+// function IconDishComp(props: any) {
+//   const iconImg = props.imgUrl;
+//   const icondescription = props.description;
+//   return (
+//     <div>
+//       <div className="icon_img">
+//         <img className="icon_dish_img">{iconImg}</img>
+//         <p className="icon_dish_description">{icondescription}</p>
+//       </div>
+//     </div>
+//   );
+// }
+
+const IconDishComp = (props) => (
+  <div>
     <div className="icon_img">
-        <img className='icon_dish_img' src={SpicyLogo}/>
-        <p className="icon_dish_description">Spicy</p>
-    </div>);
-
-}
+      <img className="icon_dish_img" src={props.iconImg}/>
+      <p className="icon_dish_description">{props.icondescription}</p>
+    </div>
+  </div>
+);
 export default IconDishComp;

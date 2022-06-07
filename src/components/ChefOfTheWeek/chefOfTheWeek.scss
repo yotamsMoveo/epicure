@@ -1,5 +1,7 @@
+@import "../../style/base.scss";
+
 .ChefOfTheWeek_tilte {
-  width: 186px;
+  // width: 186px;
   height: 35px;
   left: 20px;
   top: 1902px;
@@ -18,8 +20,51 @@
 }
 
 .ChefOfTheWeek_body {
-  width: 360px;
-  height: 338px;
+  width: 335px;
+  height: 1400px;
   left: calc(50% - 360px / 2 + 0.5px);
   top: calc(50% - 338px / 2);
+}
+
+.ChefOfTheWeek_layout {
+  width: 335px;
+  height: 47px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 47px;
+  /* identical to box height, or 261% */
+
+  text-align: center;
+  letter-spacing: 2.67px;
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.ChefOfTheWeek_description {
+  width: 335px;
+  height: 252px;
+  left: 20px;
+  top: 2239px;
+
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+
+  text-align: justify;
+  letter-spacing: 1.25px;
+
+  color: #000000;
 }

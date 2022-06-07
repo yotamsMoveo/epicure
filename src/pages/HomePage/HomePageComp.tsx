@@ -7,6 +7,9 @@ import { Carousel } from "react-responsive-carousel";
 import AboutUsComp from "../../components/Aboutus/AboutUsComp.tsx";
 import SignatureDishsIconComp from "../../components/Sinature_Dishs_Icon/SignatureDishsIconComp.tsx";
 import ChefOfTheWeek from "../../components/ChefOfTheWeek/ChefOfTheWeek.tsx";
+import ChefImg from "../../assets/chefImg.png";
+import BestRestaurantsComp from "../../components/BestRestaurants/BestRestaurantsComp.tsx";
+import BestdishesComp from "../../components/BestDishes/BestDishesComp.tsx";
 
 function HomePage(props: any) {
   const bestResturants = props.bestResturants;
@@ -22,9 +25,40 @@ function HomePage(props: any) {
   );
 
   return (
+    // <div
+    //   className="HomePage_body
+    // "
+    // >
+    //   <div className="HomePage_welcom">
+    //     <div className="HomePage_card">
+    //       <h1 className="HomePage_card_title">
+    //         Epicure works with the top chef restaurants in Tel Aviv
+    //       </h1>
+    //       <div className="HomePage_searchField">
+    //         <TextFieldComp text="Search for restaurant cuisine, chef" />
+    //       </div>
+    //     </div>
+    //   </div>
+    //   <div>
+    //     <BestRestaurantsComp />
+    //   </div>
+    //   <BestdishesComp/>
+
+    //   <div>
+    //     <SignatureDishsIconComp />
+    //   </div>
+
+    //   <div>
+    //     <ChefOfTheWeek chefImg={ChefImg} chefName="Yossi Shitrit" />
+    //   </div>
+
+    //   <div>
+    //     <AboutUsComp />
+    //   </div>
+    // </div>
     <div
       className="HomePage_body
-    "
+  "
     >
       <div className="HomePage_welcom">
         <div className="HomePage_card">
@@ -36,19 +70,11 @@ function HomePage(props: any) {
           </div>
         </div>
       </div>
-
-     
-      <div>
-        <SignatureDishsIconComp/>
-      </div>
-
-      <div>
-        <ChefOfTheWeek/>
-      </div>
-
-      <div>
-        <AboutUsComp />
-      </div>
+      <BestRestaurantsComp />
+      <BestdishesComp />
+      <SignatureDishsIconComp />
+      <ChefOfTheWeek chefImg={ChefImg} chefName="Yossi Shitrit"/>
+      <AboutUsComp />
     </div>
   );
 }

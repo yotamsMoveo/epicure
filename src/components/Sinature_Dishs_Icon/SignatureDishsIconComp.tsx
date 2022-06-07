@@ -6,7 +6,7 @@ function SignatureDishsIconComp(props: any) {
   return (
     <div className="signatureDishs_body">
       <div className="signatureDishs_title">Signature Dish Of:</div>
-      <div className="IconList"><IconDishComp iconImg='../../assets/spicyLogo.png' icondescription='Spicy'/></div>
+      <div className="IconList"><IconDishComp iconImg={SpicyLogo} icondescription='Spicy'/></div>
     </div>
   );
 }

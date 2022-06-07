@@ -6,6 +6,7 @@ import CardComp from "../../components/Card/CardComp.tsx";
 import { Carousel } from "react-responsive-carousel";
 import AboutUsComp from "../../components/Aboutus/AboutUsComp.tsx";
 import SignatureDishsIconComp from "../../components/Sinature_Dishs_Icon/SignatureDishsIconComp.tsx";
+import ChefOfTheWeek from "../../components/ChefOfTheWeek/ChefOfTheWeek.tsx";
 
 function HomePage(props: any) {
   const bestResturants = props.bestResturants;
@@ -39,6 +40,10 @@ function HomePage(props: any) {
      
       <div>
         <SignatureDishsIconComp/>
+      </div>
+
+      <div>
+        <ChefOfTheWeek/>
       </div>
 
       <div>

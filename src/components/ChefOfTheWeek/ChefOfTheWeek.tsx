@@ -1,6 +1,10 @@
+import "../../components/ChefOfTheWeek/chefOfTheWeek.scss";
 function ChefOfTheWeek(props:any){
-    return(<div className="chef_of_the_week_body">
-        <div className="chef_of_the_week_img"></div>
+    return(<div className="ChefOfTheWeek_body">
+        <p className='ChefOfTheWeek_tilte'>Chef of the week:</p>
+        <div className="ChefOfTheWeek_img">
+            
+        </div>
     </div>)
 
 }

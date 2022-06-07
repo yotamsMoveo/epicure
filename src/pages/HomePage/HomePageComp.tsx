@@ -5,6 +5,7 @@ import TextFieldComp from "../../components/TextField/TextFieldComp.tsx";
 import CardComp from "../../components/Card/CardComp.tsx";
 import { Carousel } from "react-responsive-carousel";
 import AboutUsComp from "../../components/Aboutus/AboutUsComp.tsx";
+import SignatureDishsIconComp from "../../components/Sinature_Dishs_Icon/SignatureDishsIconComp.tsx";
 
 function HomePage(props: any) {
   const bestResturants = props.bestResturants;
@@ -36,7 +37,9 @@ function HomePage(props: any) {
       </div>
 
      
-
+      <div>
+        <SignatureDishsIconComp/>
+      </div>
 
       <div>
         <AboutUsComp />

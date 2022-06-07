@@ -1,4 +1,5 @@
 import aboutLogo from "../../assets/about-logo.png";
+import "../../components/Aboutus/AboutUs.scss";
 function AboutUsComp() {
   return (
     <div className="AboutUsComp_about_us">

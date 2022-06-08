@@ -1,5 +1,8 @@
-import aboutLogo from "../../assets/about-logo.png";
+import aboutLogo from "../../assets/images/about_logo.png";
+import react from 'react';
 import "../../components/Aboutus/AboutUs.scss";
+
+
 function AboutUsComp() {
   return (
     <div className="AboutUsComp_body">

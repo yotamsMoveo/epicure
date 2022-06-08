@@ -1,0 +1,73 @@
+.WelcomeCardComp_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    gap: 18px;
+
+    // width: 335px;
+    height: 144px;
+    left: 20px;
+    top: 20%;
+   
+    background: rgba(255, 255, 255, 0.88);
+  }
+  
+  .WelcomeCardComp_welcom {
+    background-image: url(../../assets/images/backgroundPic.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    // width: 564.83px;
+    justify-content: center;
+    align-items: center;
+    height: 273px;
+    left:-140px;
+    top: 46px;
+    
+
+  }
+  
+  .WelcomeCardComp_card_title {
+    // width: 315px;
+    height: 64px;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 32px;
+    /* or 133% */
+  
+    letter-spacing: 1.97px;
+  
+    color: #000000;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .WelcomeCardComp_searchField {
+    width: 253px;
+    height: 15px;
+  
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 20px 20px;
+    /* identical to box height */
+  
+    letter-spacing: 1.29px;
+  
+    color: #000000;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+  }

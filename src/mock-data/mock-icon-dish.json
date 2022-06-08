@@ -1,14 +1,14 @@
 [
   {
-    "img": "../assets/spicyLogo.png",
+    "img": "../assets/images/spicyLogo.png",
     "title": "Spicy"
   },
   {
-    "img": "../assets/veganLogo2.png",
+    "img": "../assets/images/veganLogo2.png",
     "title": "Vegan"
   },
   {
-    "img": "../assets/VegitarianLogo.png",
+    "img": "../assets/images/VegitarianLogo.png",
     "title": "Vegitarian"
   }
 ]

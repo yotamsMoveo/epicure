@@ -1,5 +1,6 @@
 import Button from '@mui/material/Button';
 import Restaurant from '../../pages/restaurant';
+import * as React from "react";
 
 function ButtonComp(props){
     function DoSomething(){

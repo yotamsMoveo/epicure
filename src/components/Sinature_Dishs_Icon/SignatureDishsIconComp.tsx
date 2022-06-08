@@ -1,11 +1,5 @@
 import IconDishComp from "../IconDish/IconDishComp.tsx";
-import SpicyLogo from '../../assets/spicyLogo.png';
 import "../../components/Sinature_Dishs_Icon/signatureDishs.scss";
-import veganLogo from '../../assets/veganLogo2.png';
-import VegitarianLogo from '../../assets/VegitarianLogo.png'
-import { useState } from "react";
-import api_service from '../../services/api_service.tsx';
-import { render } from "react-dom";
 import IconDishes from '../../mock-data/mock-icon-dish.json';
 
 function SignatureDishsIconComp() {
@@ -15,7 +9,7 @@ function SignatureDishsIconComp() {
       <div>
         {
           IconDishes.map((item)=>{
-            return <IconDishComp iconImg={item.img} icondescription={item.title}/>
+            return <IconDishComp iconImg={item.img} icondescription={item.title} key={item.title}/>
           })
         }
       </div>

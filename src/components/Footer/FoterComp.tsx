@@ -2,27 +2,24 @@ import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const FooterPage = () => {
+  function navigateToConact(){
+
+  }
   return (
-    <MDBFooter color="blue" className="footer">
-      <MDBContainer fluid className="footer">
-        <MDBRow>
-          <MDBCol md="6" className="footer">
-            <ul>
-              <li className="list-unstyled">
-                <a href="#!">Contact Us</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Term of Use</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Privacy Policy</a>
-              </li>
-            </ul>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
-    </MDBFooter>
+    <div className="FooterPage_footer">
+      <p onClick={navigateToConact} className="FooterPage_footer_href">
+        Contact Us
+      </p>
+      <br />
+      <p onClick={navigateToConact}  className="FooterPage_footer_href">
+        Term of Use
+      </p>
+      <br />
+      <p onClick={navigateToConact}  className="FooterPage_footer_href">
+        Privacy Policy
+      </p>
+    </div>
   );
-}
+};
 
 export default FooterPage;

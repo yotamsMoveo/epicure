@@ -1,33 +1,32 @@
-import * as React from "react";
-import TextField from "@mui/material/TextField";
-import Box from "@mui/material/Box";
-import searchLogo from '../../assets/search.png';
+import React, { useState } from "react";
+import search_logo from "../../assets/images/search.png";
+import '../TextField/TextField.scss';
 
 function TextFieldComp(props) {
-  return (
-    // <Box
-    //   component="form"
-    //   sx={{
-    //     "& > :not(style)": { m: 2, width: "25ch" },
-    //   }}
-    //   noValidate
-    //   autoComplete="off"
-    // >
-    //   <TextField focused defaultValue={props.text}></TextField>
-    // </Box>
-    // <TextField focused >
-    //   <img className='TextFieldComp_searchLogo' src={searchLogo}/>
-    // </TextField>
+  const [searchByElement, setSearchByElement] = useState('');
+  const [selectElement, setSelectElement] = useState('');
 
-    <form>
-      <label>
-        <input type="text" name="name" >
-          {/* <div>
-            <img className='TextFieldComp_searchLogo' src={searchLogo}/>
-          </div> */}
-        </input>
-      </label>
-    </form>
+  const inputChanged = (event) => {
+    setSearchByElement(event.target.value);
+  };
+
+  const searchSelectedElement = (event) => {
+    event.preventDefault();
+    setSelectElement(searchByElement);
+    setSearchByElement('');
+  };
+
+  return (
+    <div className="TextFieldComp_body">
+      <form onSubmit={searchSelectedElement}>
+      <button type="submit" onClick={searchSelectedElement}>
+          <img src={search_logo} className="TextFieldComp_searchLogo" />
+        </button>
+        <label>
+          <input type="text" name="name"  onChange={inputChanged}></input>
+        </label>
+      </form>
+    </div>
   );
 }
 export default TextFieldComp;

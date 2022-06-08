@@ -1,5 +1,4 @@
 .Navbar_icon {
-  position: absolute;
   left: 5.33%;
   right: 88.27%;
   top: 23.91%;
@@ -14,7 +13,7 @@
 }
 
 .Navbar_navbar {
-  position: absolute;
+ display: flex;
   left: 0%;
   right: 0%;
   top: 0%;
@@ -29,13 +28,11 @@
   top: 0%;
   bottom: 0%;
 }
-.Navbar_bagLogoLogo {
+.Navbar_bagLogo{
   left: 2.17%;
   right: 2.17%;
   top: 0%;
   bottom: 0%;
-
-  background: #000000;
 }
 
 .Navbar_conactUsLogo {
@@ -43,6 +40,4 @@
   right: 4.17%;
   top: 4.17%;
   bottom: 4.17%;
-
-  border: 0.5px solid #000000;
 }

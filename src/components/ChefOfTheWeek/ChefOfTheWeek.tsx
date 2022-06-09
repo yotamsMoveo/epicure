@@ -7,35 +7,34 @@ import "slick-carousel/slick/slick-theme.css";
 import { settings } from "../../assets/settings/slider_settings.tsx";
 
 function ChefOfTheWeek() {
+  var restaurantNames = mockChef.restaurants;
   return (
     <div className="ChefOfTheWeek_body">
       <h1 className="ChefOfTheWeek_tilte">Chef of the week:</h1>
-      {mockChef.map((chef) => {
-        var restaurantNames = chef.restaurants;
-        return (
-          <div key={chef.name}>
-            <img className="ChefOfTheWeek_img" src={chef.image} />
-            <p className="ChefOfTheWeek_layout">{chef.name}</p>
-            <p className="ChefOfTheWeek_description">{chef.description}</p>
-
-            <Slider {...settings}>
-              {restaurantNames.map((item) => (
-                <CardComp
-                  img={item.image}
-                  title={item.name}
-                  key={item.name}
-                  classNameProp="CardComp_small"
-                />
-              ))}
-            </Slider>
-            {/* {
-            restaurantNames.map((item)=>{
-              return(<CardComp img={item.image} title={item.name} key={item.name} classNameProp='CardComp_small'/>)
-            })
-          } */}
-          </div>
-        );
-      })}
+      <div
+        className="ChefOfTheWeek"
+        style={{
+          alignContent:"center",
+          backgroundRepeat:"no-repeat",
+          background: `url(${mockChef.image})`,
+        }}
+      >
+        {/* <img className="ChefOfTheWeek_img" src={mockChef.image} ></img> */}
+        <p className="ChefOfTheWeek_layout">{mockChef.name}</p>
+      </div>
+      <p className="ChefOfTheWeek_description">{mockChef.description}</p>
+      <div className="ChefOfTheWeek_slider"> 
+      <Slider {...settings} >
+        {restaurantNames.map((resturant) => (
+          <CardComp 
+            img={resturant.image}
+            title={resturant.name}
+            key={resturant.name}
+            classNameProp="CardComp_small"
+          />
+        ))}
+      </Slider>
+      </div>
     </div>
   );
 }

@@ -1,43 +1,23 @@
-.Navbar_icon {
-  left: 5.33%;
-  right: 88.27%;
-  top: 23.91%;
-  bottom: 23.91%;
+.Navbar_conteiner {
+  display: flex;
+  flex-direction: row;
+  padding-inline: 2vw;
+}
+.Navbar_leftside {
+  flex: 1;
+  margin: auto;
+  text-align: left;
 }
 
-.Navbar_mainlogo {
-  left: 45.6%;
-  right: 45.62%;
-  top: 15.22%;
-  bottom: 15.22%;
+.Navbar_center {
+  flex: 1;
+  margin: auto;
+  text-align: center;
 }
 
-.Navbar_navbar {
- display: flex;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-
-  background: #ffffff;
-}
-
-.Navbar_searchLogo {
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-}
-.Navbar_bagLogo{
-  left: 2.17%;
-  right: 2.17%;
-  top: 0%;
-  bottom: 0%;
-}
-
-.Navbar_conactUsLogo {
-  left: 4.17%;
-  right: 4.17%;
-  top: 4.17%;
-  bottom: 4.17%;
+.Navbar_rightSide {
+  flex: 1;
+  margin: auto;
+  margin-right: 2vw;
+  text-align: right;
 }

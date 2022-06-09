@@ -8,11 +8,11 @@ import "slick-carousel/slick/slick-theme.css";
 import { settings } from "../../assets/settings/slider_settings.tsx";
 
 function BestdishesComp() {
-    function navigateToDishes(){
-        console.log('navigate');
-    }
+  function navigateToDishes() {
+    console.log("navigate");
+  }
   return (
-    <>
+    <div className="BestdishesComp_body">
       <p className="BestdishesComp_title">Signature Dish Of:</p>
       <div>
         <Slider {...settings}>
@@ -27,9 +27,11 @@ function BestdishesComp() {
           ))}
         </Slider>
       </div>
-      <br/>
-      <p className="BestRestaurantsComp_button" onClick={navigateToDishes}>All Restaurants</p>
-    </>
+      <br />
+      <p className="BestRestaurantsComp_button" onClick={navigateToDishes}>
+        All Restaurants
+      </p>
+    </div>
   );
 }
 export default BestdishesComp;

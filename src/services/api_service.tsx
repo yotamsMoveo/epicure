@@ -1,30 +1,22 @@
-import CardComp from "../components/Card/CardComp.tsx";
-import IconDishComp from "../components/IconDish/IconDishComp.tsx";
+import axios from "axios";
 
-function api_service(props: any) {
-  let list: Array<CardComp> = new Array<typeof CardComp>();
-
-  ///return the best resturants
-  function GetBestResturants() {
-    
-    list.forEach(element => {
-      console.log(element);
-    });
-    return list;
-  }
-
-  ///return the icon dish
-  function GetListOfIconDish(){
-    let iconDishArr:Array<IconDishComp>=new Array<typeof IconDishComp>();
-  }
-  switch (props) {
-    case "getBestResturants": {
-      GetBestResturants();
-    }
-    case "getListOfIconDish":{
-      GetListOfIconDish();
-    }
-  }
+export async function getBestDishesData() {
+  const url="https://reqres.in/api/products/3";
+  const data = await fetch(url);
+  const json = await data.json();
+  return json;
 }
 
-export default api_service;
+export async function getBestResturantsData() {
+  const url="https://reqres.in/api/products/3";
+  const data = await fetch(url);
+  const json = await data.json();
+  return json;
+}
+
+export async function getChefOfTheWeekData() {
+  const url="https://reqres.in/api/products/3";
+  const data = await fetch(url);
+  const json = await data.json();
+  return json;
+}

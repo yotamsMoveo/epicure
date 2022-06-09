@@ -17,10 +17,11 @@
   height: 95px;
   left: 19px;
   top: 2920px;
+  padding-left: 2%;
+  padding-top: 4%;
 }
 
 .AboutUsComp_title {
-  
   // width: 101px;
   // height: 35px;
   // left: 20px;
@@ -31,18 +32,17 @@
   font-weight: 200;
   font-size: 18px;
   line-height: 35px;
-  text-align:justify;
+  text-align: justify;
   /* identical to box height, or 194% */
-
+  padding-left: 2%;
   letter-spacing: 1.25px;
   text-transform: uppercase;
 
   color: #000000;
 }
 
-.AboutUsComp_parograph{
-  
-  // width: 331px;
+.AboutUsComp_parograph {
+  // width: 80%;
   // height: 280px;
   // left: 19px;
   // top: 3266px;
@@ -51,9 +51,10 @@
   font-weight: 200;
   font-size: 18px;
   line-height: 28px;
-  text-align:justify;
+  text-align: justify;
   /* or 156% */
-
+  padding-left: 2%;
+  padding-right: 13%;
   letter-spacing: 2.14px;
 
   color: #000000;

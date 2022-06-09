@@ -1,14 +1,14 @@
 [
   {
-    "img": "../assets/images/spicyLogo.png",
+    "img": "https://i.ibb.co/Jd0XzpP/spicy-Logo.png",
     "title": "Spicy"
   },
   {
-    "img": "../assets/images/veganLogo2.png",
+    "img": "https://i.ibb.co/B4QH5P8/vegan-Logo2.png",
     "title": "Vegan"
   },
   {
-    "img": "../assets/images/VegitarianLogo.png",
+    "img":"https://i.ibb.co/KhBdsKZ/Vegitarian-Logo.png" ,
     "title": "Vegitarian"
   }
 ]

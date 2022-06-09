@@ -12,37 +12,56 @@ import searchlogo from "../../assets/images/search.png";
 import bagLogo from "../../assets/images/bagLogo.png";
 import conactUsLogo from "../../assets/images/conactUsLogo.png";
 import drawerComp from "../Drawer/DrawerComp.tsx";
+import PopUpComp from "../PopUp/PopUpComp.tsx";
+import { useState } from "react";
 
 const Navbar = (props: any) => {
-  function openHamborg() {
-    console.log("hamborg open");
-    // open(drawerComp);
-    // return(<div><drawerComp/></div>);
+  const [isOpen, setIsOpen] = useState(false);
+  const [popup, setPopUp] = useState(null);
+  function handlePopUpOpen(selectedPopUp: string) {
+    setIsOpen(!isOpen);
+    if (isOpen || selectedPopUp.localeCompare(popup) != 0) {
+      setPopUp(selectedPopUp);
+    } else setPopUp(null);
   }
 
   return (
-    // <Box  sx={{ flex: 1 }}>
-    <AppBar position="static">
-      <Toolbar className="Navbar_navbar">
-        <div>
-          <IconButton className="Navbar_icon" onClick={openHamborg}>
-            <MenuIcon />
-          </IconButton>
-          <img className="Navbar_mainlogo" src={mainlogo} />
-        </div>
-        {/* <img className='searchLogo' src={searchlogo}/> */}
-        {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Epicure
-            </Typography>
-            <Button color="inherit" >Login</Button> */}
-        <div>
-          <img className="Navbar_searchLogo" src={searchlogo} />
-          <img className="Navbar_bagLogo" src={bagLogo} />
-          <img className="Navbar_conactUsLogo" src={conactUsLogo} />
-        </div>
-      </Toolbar>
-    </AppBar>
-    // </Box>
+    <div>
+      <div className="Navbar_conteiner">
+        {/* <ul> */}
+          <div className="Navbar_leftside">
+          {/* <li> */}
+            <IconButton
+              className="Navbar_icon"
+              onClick={() => handlePopUpOpen("menu")}
+            >
+              <MenuIcon />
+            </IconButton>
+          {/* </li> */}
+          </div>
+          <div className="Navbar_center">
+            {/* <li className="Navbar_mainlogo"> */}
+              <img src={mainlogo} />
+            {/* </li> */}
+          </div>
+          <div className="Navbar_rightSide">
+            {/* <li className="Navbar_searchLogo"> */}
+              <img src={searchlogo} onClick={() => handlePopUpOpen("search")} />
+            {/* </li> */}
+            {/* <li className="Navbar_conactUsLogo"> */}
+              <img
+                src={conactUsLogo}
+                onClick={() => handlePopUpOpen("conact")}
+              />
+            {/* </li> */}
+            {/* <li className="Navbar_bagLogo"> */}
+              <img src={bagLogo} onClick={() => handlePopUpOpen("bag")} />
+            {/* </li> */}
+          </div>
+        {/* </ul> */}
+        {{ isOpen } && <PopUpComp selectedPopUp={popup} />}
+      </div>
+    </div>
   );
 };
 

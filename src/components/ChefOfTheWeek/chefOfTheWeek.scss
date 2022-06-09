@@ -20,10 +20,8 @@
 }
 
 .ChefOfTheWeek_body {
-  // width: 335px;
-  // height: 1400px;
-  // left: calc(50% - 360px / 2 + 0.5px);
-  // top: calc(50% - 338px / 2);
+  padding-bottom: 20px;
+  align-items: center;
 }
 
 .ChefOfTheWeek_layout {
@@ -39,7 +37,7 @@
 
   text-align: center;
   letter-spacing: 2.67px;
-
+  vertical-align: bottom;
   color: #000000;
 
   /* Inside auto layout */
@@ -48,6 +46,7 @@
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .ChefOfTheWeek_description {
@@ -55,7 +54,7 @@
   height: 252px;
   left: 20px;
   top: 2239px;
-  text-align: center;
+  text-align: left;
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 200;
@@ -63,10 +62,25 @@
   line-height: 28px;
   /* or 156% */
   letter-spacing: 1.25px;
+  padding-left: 9%;
+  padding-right: 9%;
+  padding-bottom: 3%;
 
   color: #000000;
 }
 
-.ChefOfTheWeek_img{
-  height: 340px;
+.ChefOfTheWeek_img {
+  width: 100%;
+}
+
+.ChefOfTheWeek {
+  align-items: center;
+  width: 80%;
+  height: 338px;
+  left: calc(50% - 360px / 2 + 0.5px);
+  top: calc(50% - 338px / 2);
+}
+
+.ChefOfTheWeek_slider{
+  padding-left: 2%;
 }

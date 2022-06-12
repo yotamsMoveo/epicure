@@ -5,6 +5,8 @@ export const settings = {
   slidesToShow: 3,
   slidesToScroll: 3,
   initialSlide: 0,
+  // variableWidth: true,
+  // adaptiveHeight: true,
   responsive: [
     {
       breakpoint: 1024,
@@ -26,7 +28,7 @@ export const settings = {
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 1.3,
         slidesToScroll: 1,
       },
     },

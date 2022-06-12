@@ -11,29 +11,26 @@ function ChefOfTheWeek() {
   return (
     <div className="ChefOfTheWeek_body">
       <h1 className="ChefOfTheWeek_tilte">Chef of the week:</h1>
-      <div
-        className="ChefOfTheWeek"
-        style={{
-          alignContent:"center",
-          backgroundRepeat:"no-repeat",
-          background: `url(${mockChef.image})`,
-        }}
-      >
-        {/* <img className="ChefOfTheWeek_img" src={mockChef.image} ></img> */}
-        <p className="ChefOfTheWeek_layout">{mockChef.name}</p>
+      <div className="parent">
+        <img
+          src={mockChef.image}
+          alt="chef of the month"
+          className="half-fade-image"
+        ></img>
+        <div className="opacity_div">Yossi Shitrit</div>
       </div>
       <p className="ChefOfTheWeek_description">{mockChef.description}</p>
-      <div className="ChefOfTheWeek_slider"> 
-      <Slider {...settings} >
-        {restaurantNames.map((resturant) => (
-          <CardComp 
-            img={resturant.image}
-            title={resturant.name}
-            key={resturant.name}
-            classNameProp="CardComp_small"
-          />
-        ))}
-      </Slider>
+      <div className="ChefOfTheWeek_slider">
+        <Slider {...settings}>
+          {restaurantNames.map((resturant) => (
+            <CardComp
+              img={resturant.image}
+              title={resturant.name}
+              key={resturant.name}
+              classNameProp="CardComp_small"
+            />
+          ))}
+        </Slider>
       </div>
     </div>
   );

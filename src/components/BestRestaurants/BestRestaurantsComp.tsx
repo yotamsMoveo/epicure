@@ -16,7 +16,7 @@ function BestRestaurantsComp() {
   return (
     <div className="BestResturantsComp">
       <p className="BestResturantsComp_title">popular restaurant in epicure:</p>
-      <div>
+      <div className="BestResturantsComp_slider">
       <Slider {...settings}>
           {bestResturants.map((resturant) => (
               <CardComp

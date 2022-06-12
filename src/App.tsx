@@ -10,12 +10,20 @@ import Layout from "./pages/layout";
 import FooterPage from "./components/Footer/FoterComp.tsx";
 
 function App(props) {
-  const [homePageData, setHomePageData] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [popup, setPopUp] = useState(null);
+
+  function handlePopUpOpen(selectedPopUp: string) {
+    setIsOpen(!isOpen);
+    if (isOpen || selectedPopUp.localeCompare(popup) != 0) {
+      setPopUp(selectedPopUp);
+    } else setPopUp(null);
+  }
 
   return (
     <div>
       {props.children}
-      <Navbar />
+      <Navbar onClick={handlePopUpOpen} isOpen={isOpen} popup={popup}/>
       <Router>
         <Routes>
           <Route path="/" element={<Layout />}>

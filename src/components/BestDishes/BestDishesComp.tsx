@@ -14,20 +14,22 @@ function BestdishesComp() {
   return (
     <div className="BestdishesComp_body">
       <p className="BestdishesComp_title">Signature Dish Of:</p>
-      <div>
+      <div className="BestdishesComp_slider">
         <Slider {...settings}>
           {bestDishes.map((dish) => (
             <CardComp
               img={dish.image}
               title={dish.name}
               description={dish.description}
+              type={dish.type}
+              price={dish.price}
               key={dish.name}
               classNameProp="CardComp_big"
             />
           ))}
         </Slider>
-      </div>
-      <br />
+        </div>
+        <br/>
       <p className="BestRestaurantsComp_button" onClick={navigateToDishes}>
         All Restaurants
       </p>

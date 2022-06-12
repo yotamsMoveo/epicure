@@ -1,5 +1,5 @@
 import "../WelcomeCard/welcomeCard.scss";
-import TextFieldComp from '../TextField/TextFieldComp.tsx';
+import TextFieldComp from "../TextField/TextFieldComp.tsx";
 
 function WelcomeCardComp() {
   return (
@@ -9,7 +9,9 @@ function WelcomeCardComp() {
           Epicure works with the top chef restaurants in Tel Aviv
         </h1>
         <div className="WelcomeCardComp_searchField">
-          <TextFieldComp text="Search for restaurant cuisine, chef" />
+          <form>
+            <input placeholder="Search for restaurant cuisine, chef" className="WelcomeCardComp_searchInput"></input>
+          </form>
         </div>
       </div>
     </div>

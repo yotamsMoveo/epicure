@@ -15,51 +15,40 @@ import drawerComp from "../Drawer/DrawerComp.tsx";
 import PopUpComp from "../PopUp/PopUpComp.tsx";
 import { useState } from "react";
 
-const Navbar = (props: any) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [popup, setPopUp] = useState(null);
-  function handlePopUpOpen(selectedPopUp: string) {
-    setIsOpen(!isOpen);
-    if (isOpen || selectedPopUp.localeCompare(popup) != 0) {
-      setPopUp(selectedPopUp);
-    } else setPopUp(null);
-  }
+export const Navbar = (props: any) => {
+  // const [isOpen, setIsOpen] = useState(false);
+  // const [popup, setPopUp] = useState(null);
 
+  // function handlePopUpOpen(selectedPopUp: string) {
+  //   setIsOpen(!isOpen);
+  //   if (isOpen || selectedPopUp.localeCompare(popup) != 0) {
+  //     setPopUp(selectedPopUp);
+  //   } else setPopUp(null);
+  // }
+  var isOpen = props.isOpen;
+  var popup = props.popup;
   return (
     <div>
       <div className="Navbar_conteiner">
-        {/* <ul> */}
-          <div className="Navbar_leftside">
-          {/* <li> */}
-            <IconButton
-              className="Navbar_icon"
-              onClick={() => handlePopUpOpen("menu")}
-            >
-              <MenuIcon />
-            </IconButton>
-          {/* </li> */}
-          </div>
-          <div className="Navbar_center">
-            {/* <li className="Navbar_mainlogo"> */}
-              <img src={mainlogo} />
-            {/* </li> */}
-          </div>
-          <div className="Navbar_rightSide">
-            {/* <li className="Navbar_searchLogo"> */}
-              <img src={searchlogo} onClick={() => handlePopUpOpen("search")} />
-            {/* </li> */}
-            {/* <li className="Navbar_conactUsLogo"> */}
-              <img
-                src={conactUsLogo}
-                onClick={() => handlePopUpOpen("conact")}
-              />
-            {/* </li> */}
-            {/* <li className="Navbar_bagLogo"> */}
-              <img src={bagLogo} onClick={() => handlePopUpOpen("bag")} />
-            {/* </li> */}
-          </div>
-        {/* </ul> */}
-        {{ isOpen } && <PopUpComp selectedPopUp={popup} />}
+        <div className="Navbar_leftside">
+          <IconButton
+            className="Navbar_icon"
+            onClick={() => props.onClick("menu")}
+          >
+            <MenuIcon />
+          </IconButton>
+        </div>
+        <div className="Navbar_center">
+          <img src={mainlogo} />
+        </div>
+        <div className="Navbar_rightSide">
+          <img src={searchlogo} onClick={() => props.onClick("search")} />
+          <img src={conactUsLogo}  />
+          <img src={bagLogo} onClick={() => props.onClick("bag")} />
+        </div>
+        {{ isOpen } && (
+          <PopUpComp selectedPopUp={props.popup} onClick={props.onClick} />
+        )}
       </div>
     </div>
   );
